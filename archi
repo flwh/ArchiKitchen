@@ -46,7 +46,7 @@ UPDATER_SCRIPT_MODEM="updater-script-91_MODEM"
 UPDATER_SCRIPT_TAIL="updater-script-99_TAIL" # Unused
 
 clear
-echo -n "Please wait"
+echo -n "请稍候"
 
 # Before we begin, make sure that all our tools are available
 MISSINGTOOLS=""
@@ -60,8 +60,8 @@ echo ""
 
 if [ ! -z "$MISSINGTOOLS" ]; then
 	echo "It looks like you don't have required tool(s): $MISSINGTOOLS"
-	echo "This check was made through 'which' command"
-	echo "Please install missing tool(s) and launch kitchen again"
+	echo "这种检查是通过 'which' 命令检查"
+	echo "请重新安装缺少的工具 和启动厨房"
 	exit 1
 fi
 
