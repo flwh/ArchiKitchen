@@ -59,7 +59,7 @@ done
 echo ""
 
 if [ ! -z "$MISSINGTOOLS" ]; then
-	echo "It looks like you don't have required tool(s): $MISSINGTOOLS"
+	echo "它看起来你没有安装所需的工具: $MISSINGTOOLS"
 	echo "这种检查是通过 'which' 命令检查"
 	echo "请重新安装缺少的工具 和启动厨房"
 	exit 1
@@ -89,7 +89,7 @@ chmod -R 755 tools
 
 # Waits for user action
 PRESS_ENTER() {
-	read -p "Press [Enter] key to continue..."
+	read -p "按[Enter]键继续..."
 }
 
 # Executes commands given in arguments as root
@@ -97,7 +97,7 @@ ROOT_EXECUTE() {
 	if [ "$CUSER" == "root" ]; then
 		$@ # Yes, we must break on spaces in this case
 	else
-		echo "Root access is required! $@"
+		echo "需要root访问权限！$@"
 		if [ ! -z "$(which sudo)" ]; then
 			sudo $@ # Yes, we must break on spaces in this case
 		else
